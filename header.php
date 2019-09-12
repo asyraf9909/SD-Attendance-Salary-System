@@ -32,5 +32,13 @@
       .bold{
         font-weight: bold;
       }
+	  .center{
+		margin: auto; 
+		display: block;
+		top: 5px;
+		right: 10vw;
+		position: absolute;
+		border-radius: 5px;
+	  }
   	</style>
 </head>

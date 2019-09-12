@@ -1,6 +1,7 @@
 <?php session_start(); ?>
 <?php include 'header.php'; ?>
 <body class="hold-transition login-page">
+
 <div class="login-box">
   	<div class="login-logo">
   		<p id="date"></p>
@@ -36,7 +37,11 @@
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
       <span class="result"><i class="icon fa fa-warning"></i> <span class="message"></span></span>
     </div>
-  		
+
+      		
+    <form method="get" action="./admin">
+    <button class="center" type="submit" >Admin</button>
+    </form>
 </div>
 	
 <?php include 'scripts.php' ?>
