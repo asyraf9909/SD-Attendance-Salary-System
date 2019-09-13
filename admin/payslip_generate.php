@@ -48,7 +48,7 @@
   		$net = $gross - $total_deduction;
 
 		$contents .= '
-			<h2 align="center">TechSoft IT Solutions</h2>
+			<h2 align="center">Mee Bandung Hjh Milah Restaurant</h2>
 			<h4 align="center">'.$from_title." - ".$to_title.'</h4>
 			<table cellspacing="0" cellpadding="3">  
     	       	<tr>  
