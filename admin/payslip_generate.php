@@ -38,7 +38,6 @@
 		$empid = $row['empid'];
                       
       	$casql = "SELECT *, SUM(amount) AS cashamount FROM cashadvance WHERE employee_id='$empid' AND date_advance BETWEEN '$from' AND '$to'";
-      
       	$caquery = $conn->query($casql);
       	$carow = $caquery->fetch_assoc();
       	$cashadvance = $carow['cashamount'];
@@ -68,13 +67,7 @@
     	    		<td></td>
 				 	<td width="25%" align="right"><b>Gross Pay: </b></td>
 				 	<td width="25%" align="right"><b>'.number_format(($row['rate']*$row['total_hr']), 2).'</b></td> 
-    	    	</tr>
-    	    	<tr> 
-    	    		<td></td> 
-    	    		<td></td>
-				 	<td width="25%" align="right">Deduction: </td>
-				 	<td width="25%" align="right">'.number_format($deduction, 2).'</td> 
-    	    	</tr>
+				</tr>
     	    	<tr> 
     	    		<td></td> 
     	    		<td></td>

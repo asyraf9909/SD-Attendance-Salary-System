@@ -70,9 +70,10 @@
                   <th>Employee Name</th>
                   <th>Employee ID</th>
                   <th>Gross</th>
-                  <th>Deductions</th>
                   <th>Cash Advance</th>
                   <th>Net Pay</th>
+                  <th>Overtime</th>
+  
                 </thead>
                 <tbody>
                   <?php
@@ -80,6 +81,11 @@
                     $query = $conn->query($sql);
                     $drow = $query->fetch_assoc();
                     $deduction = $drow['total_amount'];
+
+                    $sql = "SELECT *, SUM(amount) as total_amount FROM overtime";
+                    $query = $conn->query($sql);
+                    $drow = $query->fetch_assoc();
+                    $overtime = $drow['total_amount'];
   
                     
                     $to = date('Y-m-d');
@@ -113,10 +119,10 @@
                         <tr>
                           <td>".$row['firstname']." ".$row['lastname']."</td>
                           <td>".$row['employee_id']."</td>
-                          <td>".number_format($gross, 2)."</td>
-                          <td>".number_format($deduction, 2)."</td>
+                          <td>".number_format($gross, 2)."</td> 
                           <td>".number_format($cashadvance, 2)."</td>
                           <td>".number_format($net, 2)."</td>
+                          <td>".number_format($overtime, 2)."</td>
                         </tr>
                       ";
                     }
